@@ -8,11 +8,6 @@ module IntercomRails
         include CustomDataHelper
         include AutoInclude::Method
 
-        if respond_to? :after_action
-          after_action :intercom_rails_auto_include
-        else
-          after_filter :intercom_rails_auto_include
-        end
       end
     end
   end
